@@ -7,7 +7,6 @@ var isMatch = function(s, p) {
     let m = s.length, n = p.length;
     let dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(false));
     dp[0][0] = true;
-
     for (let j = 1; j <= n; j++) {
         if (p[j - 1] === '*') {
             dp[0][j] = dp[0][j - 2];
